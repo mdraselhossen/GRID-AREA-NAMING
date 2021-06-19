@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css grid tutorial</title>
+	<style type="text/css">
+		.continer{
+			background-color: none;
+			width: 720px;
+			margin: 0px 0 0 100px;
+			font-size: 30px;
+			color: white;
+
+			display: grid;
+			grid-template-columns:repeat(3,1fr);
+			grid-template-rows:100px 400px 100px;
+			grid-gap: 8px;
+			grid-template-areas:"header header ."
+			                    "main-area . side-bar"
+			                    "footer footer footer" 
+		}
+		.item-1{
+			background-color: green;
+			text-align: center;
+			grid-area: header;
+		}
+		.item-2{
+			background-color: blue;
+			text-align: center;
+			grid-area: main-area;
+		}
+		.item-3{
+			background-color: purple;
+			text-align: center;
+			grid-area: side-bar;
+		}
+		.item-4{
+			background-color: red;
+			text-align: center;
+			grid-area: footer;
+		}
+	</style>
+</head>
+<body>
+	<div class="continer">
+		<div class="item-1">Header</div>
+		<div class="item-2">Main Area</div>
+		<div class="item-3">side bar</div>
+		<div class="item-4">Footer</div>
+	</div>
+
+</body>
+</html>
